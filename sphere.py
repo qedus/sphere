@@ -2282,7 +2282,7 @@ class CellUnion(object):
                 cell_id = self.__cell_ids[i]
                 if cell_id.lsb() < level_lsb:
                     cell_id = cell_id.parent(level)
-                    while i > 0 and cel_id.contains(self.__cell_ids[i - 1]):
+                    while i > 0 and cell_id.contains(self.__cell_ids[i - 1]):
                         i -= 1
                 output.append(cell_id)
                 cell_id.append_all_neighbors(level, output)
